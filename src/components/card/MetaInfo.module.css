@@ -1,0 +1,43 @@
+.container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 0.5rem;
+}
+
+.profileContainer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex: 1 1 0%;
+}
+
+.profilePicture {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+.authorInfo {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.authorInfo a:hover {
+	-webkit-text-decoration-line: underline;
+	text-decoration-line: underline;
+}
+
+.timeContainer {
+	display: flex;
+	flex-direction: column;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}

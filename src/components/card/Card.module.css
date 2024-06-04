@@ -1,0 +1,71 @@
+.cardContainer {
+	display: grid;
+	/*Sets row heights for image, heading, description, and meta-info. 4rem is the exact height for multi-line heading, and the same goes for 5.3rem.*/
+	grid-template-rows: auto 4rem 5.2rem 70px;
+	gap: 0;
+	border-width: 10px;
+	border-color: #d1d5db;
+	background-color: #f4f4f4;
+	border-radius: 0.5rem;
+}
+
+.cardContainer:hover {
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.imageWrapper {
+	/*Hides the image overflow when hovering scales up the image*/
+	overflow: hidden;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+
+.image {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+	max-height: 300px;
+	vertical-align: bottom;
+	object-fit: cover;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.image:hover {
+	transform: scale(1.05);
+}
+
+.heading {
+	display: flex;
+	padding: 0.5rem;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	font-weight: 600;
+	overflow: hidden;
+	display: -webkit-box;
+	/*Trims the heading to two lines with tailing dots.*/
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.heading:hover {
+	-webkit-text-decoration-line: underline;
+	text-decoration-line: underline;
+}
+
+.heading.a {
+	flex: 1 1 0%;
+}
+
+.text {
+	padding: 0.5rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 400;
+	/*Hides the overflow text outside of the container*/
+	overflow: hidden;
+	display: -webkit-box;
+	/*Trims the heading to three lines with tailing dots*/
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
